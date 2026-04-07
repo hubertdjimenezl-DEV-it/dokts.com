@@ -3,7 +3,7 @@ export default function Home() {
     <main className="min-h-screen bg-slate-950 px-6 py-16 text-slate-100">
       <section className="mx-auto flex w-full max-w-5xl flex-col gap-10">
         <div className="inline-flex w-fit rounded-full border border-sky-300/40 bg-sky-400/10 px-4 py-1 text-sm font-medium text-sky-200">
-          dokts.com
+          dokst.com
         </div>
 
         <div className="space-y-6">
@@ -11,7 +11,7 @@ export default function Home() {
             Tu salud en línea, rápida y simple.
           </h1>
           <p className="max-w-2xl text-lg text-slate-300">
-            Proyecto nuevo de Dokts. Esta landing ya está lista para que
+            Proyecto nuevo de Dokst. Esta landing ya está lista para que
             empecemos a construir módulos, integraciones y despliegue continuo.
           </p>
         </div>
