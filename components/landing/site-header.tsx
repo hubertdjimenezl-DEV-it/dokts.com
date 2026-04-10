@@ -82,7 +82,7 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-2 sm:flex">
           <a
-            href="#demo"
+            href="/demo"
             className="rounded-full bg-dokts-navy px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-dokts-navy/90"
           >
             Solicitar demo
@@ -121,7 +121,7 @@ export function SiteHeader() {
               </a>
             ))}
             <a
-              href="#demo"
+              href="/demo"
               className="mt-2 rounded-full bg-dokts-navy px-4 py-3 text-center text-sm font-semibold text-white"
               onClick={() => setOpen(false)}
             >

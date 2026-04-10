@@ -1,6 +1,10 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+
 export function HeroSection() {
+  const router = useRouter();
+
   return (
     <section className="relative overflow-hidden border-b border-dokts-navy/10 bg-gradient-to-b from-dokts-cream to-white px-4 pb-20 pt-12 sm:px-6 sm:pt-16">
       <div className="pointer-events-none absolute -right-24 top-0 h-96 w-96 rounded-full bg-dokts-magenta/10 blur-3xl" />
@@ -33,10 +37,18 @@ export function HeroSection() {
         </p>
 
         <form
-          id="demo"
           className="mt-10 flex max-w-3xl flex-col gap-3 sm:flex-row sm:items-stretch"
-          action="#"
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={(e) => {
+            e.preventDefault();
+            const fd = new FormData(e.currentTarget);
+            const email = String(fd.get("email") ?? "").trim();
+            const context = String(fd.get("context") ?? "").trim();
+            const params = new URLSearchParams();
+            if (email) params.set("email", email);
+            if (context) params.set("context", context);
+            const q = params.toString();
+            router.push(q ? `/demo?${q}` : "/demo");
+          }}
         >
           <label className="sr-only" htmlFor="email-hero">
             Correo electrónico

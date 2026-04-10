@@ -171,7 +171,7 @@ export function TimeCalculator() {
               <p className="mt-2 font-mono text-4xl font-bold text-dokts-cyan">{saved} h</p>
             </div>
             <a
-              href="#demo"
+              href="/demo"
               className="mt-6 flex w-full items-center justify-center rounded-2xl bg-dokts-cyan py-3 text-sm font-bold text-dokts-navy transition hover:bg-dokts-magenta hover:text-white"
             >
               Hablar con el equipo
@@ -234,7 +234,7 @@ export function AudienceSection() {
           <p className="font-mono text-sm font-bold uppercase tracking-wide text-dokts-navy">
             DOKTS: IA QUE AHORRA 40% TIEMPO MÉDICO. PRUEBA YA.
           </p>
-          <a href="#demo" className="mt-4 inline-flex rounded-full bg-dokts-navy px-8 py-3 text-sm font-semibold text-white">
+          <a href="/demo" className="mt-4 inline-flex rounded-full bg-dokts-navy px-8 py-3 text-sm font-semibold text-white">
             Solicitar demo
           </a>
         </div>
