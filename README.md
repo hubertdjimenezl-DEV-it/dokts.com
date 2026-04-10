@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# dokts.com (trabajo en `D:\`)
 
-## Getting Started
+Proyecto Next.js — landing pública Dokts. **Usa esta carpeta en disco D:** si el disco C: está sin espacio.
 
-First, run the development server:
+## Desarrollo
 
-```bash
+```powershell
+cd D:\dokts.com
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Sincronizar con GitHub / otro PC
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copia esta carpeta o haz `git clone` del repo y sustituye `app/` y `components/` con los mismos archivos.
 
-## Learn More
+## Despliegue Vercel
 
-To learn more about Next.js, take a look at the following resources:
+En el dashboard de Vercel puedes enlazar el repositorio Git o importar proyecto desde esta ruta local con la CLI (`vercel`).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Copiar al Escritorio + `npm` + `git push` (PowerShell)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Si el disco **C:** está lleno, libera espacio primero. Luego en PowerShell:
 
-## Deploy on Vercel
+```powershell
+powershell -ExecutionPolicy Bypass -File D:\dokts.com\sync-to-desktop-and-push.ps1
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ese script hace: `npm install` en `D:\`, **robocopy** a `%USERPROFILE%\Desktop\dokts.com` (sin `node_modules`), `npm install` en el clon, `git add/commit/push` a `master`. Requiere que el clon del Escritorio ya tenga el remoto de GitHub y credenciales correctas.
